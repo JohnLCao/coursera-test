@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+}
+
+#header-nav {
+	background-color: #aaa ;
+}
+
+.navbar-brand {
+	margin-top: 8px;
+	margin-bottom: 10px;
+	height: 75px;
+}
+
+.navbar-brand h1 {	
+	position: relative;
+	bottom: 20px;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #222;
+}
+
+.navbar-header button.navbar-toggle {
+	background-color: #eee;
+}
+
+.navbar-header button.navbar-toggle:hover{
+	background-color: aqua;
+	border: 1px solid navy;
+	box-shadow: 0 0 10px blue;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 1px solid black;
+}
+
+#collapsable-nav {
+	padding: 0;
+}
+
+#nav-list {
+	padding: 0;
+	margin: 0;
+}
+
+.food-item {
+	width: 100%;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: navy;
+}
+
+.line-break {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#main-stuff {
+	width: 80%;
+	background-color: mediumslateblue;
+	height: 1000px;
+	border: 5px solid deepskyblue;
+	box-shadow: 0 0 50px skyblue;
+	border-radius: 30px;
+	margin: auto;
+	margin-bottom: 5%;
+}
+
+#chicken-title {
+	color: black;
+	padding-bottom: 25px;
+}
+
+#chicken-content {
+	text-align: center;
+	color: black;
+}
+
+@media (min-width: 768px) {
+	ul {
+		display: none;
+	}
+}
