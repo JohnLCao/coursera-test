@@ -11,6 +11,11 @@ angular.module('ShoppingListCheckOff', [])
 ToBuyController.$inject = ['ShoppingListCheckOffService'];
 function ToBuyController(ShoppingListCheckOffService){
 	var buy = this;
+		
+	buy.addItem = function(){
+		ShoppingListCheckOffService.addItem(buy.newItemName, buy.newItemAmount);
+	}
+
 	buy.items = ShoppingListCheckOffService.getItemsToBuy();
 	buy.buyItem = ShoppingListCheckOffService.buyItem;
 };
@@ -42,9 +47,17 @@ function ShoppingListCheckOffService(){
 		return boughtItems;
 	};
 
+	service.addItem = function(itemName, itemAmount){
+		if (itemName !== undefined && itemAmount !== undefined){
+			toBuyItems.push({
+				name: itemName,
+				quantity: itemAmount
+			});
+		}
+	}
+
 	service.buyItem = function(index){
 		boughtItems.push(toBuyItems.splice(index, 1)[0]);
-		console.log(boughtItems);
 	};
 };
 

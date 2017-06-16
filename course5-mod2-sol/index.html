@@ -34,6 +34,12 @@
      <ul>
        <li ng-repeat="item in buy.items">Buy {{item.quantity}} {{item.name}} <button ng-click="buy.buyItem($index)" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
+     <hr>
+     <div>
+       <input type="text" placeholder="item" ng-model="buy.newItemName">
+       <input type="text" placeholder="quantity" ng-model="buy.newItemAmount">
+       <button ng-click="buy.addItem()">Add Item</button>
+     </div>
      <div ng-if="!buy.items.length" class="emptyMessage">Everything is bought!</div>
     </div>
 
