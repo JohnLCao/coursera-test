@@ -68,7 +68,7 @@ function MenuSearchService($http){
 function foundItemsDirective(){
 	var ddo = {
 		restrict: 'E',
-		templateUrl: 'snippets/matchedFood.html',
+		templateUrl: './snippets/matchedFood.html',
 		transclude: true,
 		scope: {
 			foundFoodItems: '<',
