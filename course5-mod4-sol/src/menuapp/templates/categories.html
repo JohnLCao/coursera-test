@@ -1,0 +1,11 @@
+<ul>
+	<li ng-repeat="item in cat.items">
+		{{item.name}} <br>
+		<button ui-sref="categories.items({category_sn: cat.items[$index].short_name})"
+				ng-click="cat.onClick($index)">
+			Category Items
+		</button> <br> <br>
+		<ui-view ng-show="cat.isClicked($index)"></ui-view> <br>
+
+	</li>
+</ul>

@@ -1,0 +1,9 @@
+<ul class="clear">
+	<li ng-repeat="item in foundFoodItems">
+		{{item.short_name}}, {{item.name}}, {{item.description}} 
+		<br>
+		<button ng-click="onRemove({index: $index})">Don't want this one!</button>
+		<hr>
+	</li>
+</ul>
+<div ng-transclude></div>
